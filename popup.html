@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Forms Autofill</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 340px;
+      padding: 14px;
+    }
+    input, textarea, button {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 6px 0;
+      padding: 9px;
+    }
+    textarea {
+      height: 190px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    button { cursor: pointer; }
+    #status { white-space: pre-wrap; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h3>Google Forms Autofill</h3>
+
+  <label for="formUrl">Google Form URL</label>
+  <input id="formUrl" type="url"
+         placeholder="https://docs.google.com/forms/..." />
+
+  <button id="openForm">Open Form in New Tab</button>
+
+  <label for="profile">Your profile (JSON)</label>
+  <textarea id="profile" spellcheck="false"></textarea>
+
+  <button id="saveProfile">Save Profile</button>
+  <button id="autofill">Autofill This Form</button>
+
+  <p id="status" role="status">Ready.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
